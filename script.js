@@ -11,6 +11,11 @@
 
 (function() {
   'use strict';
+  console.log("FIXED");
+  // ⚠️ CONFIGURE THIS: Set to your GitHub Pages or raw GitHub URL where images are hosted
+  // Example: 'https://yourusername.github.io/your-repo/images'
+  // Example: 'https://raw.githubusercontent.com/yourusername/your-repo/main/public/images'
+  var IMG_BASE = 'images';
 
   // Wait for DOM to be ready
   function init() {
@@ -141,6 +146,7 @@
   }
 
   function getSectionsHTML() {
+    var I = IMG_BASE; // shorthand
     return '\
     \
     <!-- SECTION 1: As Seen In Logo Bar -->\
@@ -148,7 +154,7 @@
       <div class="cb-container cb-text-center">\
         <h3 class="cb-heading cb-heading-sm" style="margin-bottom:20px;">As seen in:</h3>\
         <div class="cb-logo-bar">\
-          <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/02051c1-70d-c016-761f-ace85d2cb46_Theresa.jpg" alt="As seen in media logos" style="max-width:90%;height:auto;max-height:80px;">\
+          <img src="' + I + '/as-seen-in-logos.jpg" alt="As seen in media logos" style="max-width:90%;height:auto;max-height:80px;">\
         </div>\
       </div>\
     </div>\
@@ -158,7 +164,7 @@
       <div class="cb-container">\
         <div class="cb-row">\
           <div style="flex:0 0 auto;">\
-            <img class="cb-avatar" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/4842c2-2c1c-3156-220c-c01742a5b_pic.png" alt="Cheryl testimonial">\
+            <img class="cb-avatar" src="' + I + '/cheryl-avatar.png" alt="Cheryl testimonial">\
           </div>\
           <div style="flex:1;min-width:200px;">\
             <h2 class="cb-heading cb-heading-md"><em>Cheryl transitioned into a new career just 2 months after starting her job search!</em></h2>\
@@ -205,7 +211,7 @@
         <div class="cb-row">\
           <div class="cb-col-third">\
             <div class="cb-card">\
-              <img class="cb-check-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/7e7eca4-0d6d-6075-e5c-a43cff3850_check.png" alt="checkmark">\
+              <img class="cb-check-img" src="' + I + '/check1.png" alt="checkmark">\
               <h3 class="cb-heading cb-heading-sm cb-color-orange">Identify your transferable skills, gifts &amp; strengths</h3>\
               <p>You\'ll impress yourself with HOW many \'invisible skills\' you actually have! (<em>You might even blow your own mind</em>)</p>\
               <p style="margin-top:10px;">This opens up a world of opportunities that are available to you, that you can\'t even <em>see</em> right now.</p>\
@@ -213,7 +219,7 @@
           </div>\
           <div class="cb-col-third">\
             <div class="cb-card">\
-              <img class="cb-check-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/75850c-e04f-6c3f-b50e-d3cca3e3f45_check.png" alt="checkmark">\
+              <img class="cb-check-img" src="' + I + '/check2.png" alt="checkmark">\
               <h3 class="cb-heading cb-heading-sm cb-color-orange">Turn your existing experience into a new career you LOVE</h3>\
               <p><em>Even</em> if you don\'t know what that is yet.</p>\
               <p style="margin-top:10px;">You\'ll be amazed how much experience you ALREADY have - which is the perfect fit for the career you\'re meant to do!</p>\
@@ -221,7 +227,7 @@
           </div>\
           <div class="cb-col-third">\
             <div class="cb-card">\
-              <img class="cb-check-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/b8af38f-574c-d4d-3645-bb0cc44715d_check.png" alt="checkmark">\
+              <img class="cb-check-img" src="' + I + '/check3.png" alt="checkmark">\
               <h3 class="cb-heading cb-heading-sm cb-color-orange">Position yourself to get your ideal job, without starting over</h3>\
               <p>See the simple (yet powerful) secrets to standing out and becoming a preferred candidate for your dream job.</p>\
               <p style="margin-top:10px;">Changing careers does NOT mean starting from the bottom (<em>if</em> you do this!). Many clients start with a $20,000 increase - or more!</p>\
@@ -241,13 +247,13 @@
         <h3 class="cb-heading cb-heading-md" style="margin-bottom:10px;">"I finally feel like I have the tools I need to find a new career!"</h3>\
         <div class="cb-spacer"></div>\
         <div class="cb-testi-grid">\
-          <img class="cb-testimonial-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/1a8e65-a4b4-3e37-e2ab-e77e724b614c_testi.webp" alt="testimonial">\
-          <img class="cb-testimonial-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/003d8c2-b003-c33-e2e-ba253111744a_testi.webp" alt="testimonial">\
-          <img class="cb-testimonial-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/8fe2ac3-acb8-614e-15da-4fb17a3a7e_testi.webp" alt="testimonial">\
-          <img class="cb-testimonial-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/0b58062-5c7b-868d-4d1f-0d2c36ca1dfc_testi.webp" alt="testimonial">\
-          <img class="cb-testimonial-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/73e4101-e-06ab-8322-a036d5c5c5a2_testi.webp" alt="testimonial">\
-          <img class="cb-testimonial-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/35f80e-af14-cee-1887-1172d71acb2_testi.webp" alt="testimonial">\
-          <img class="cb-testimonial-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/d80dd88-2752-608-d677-abdae2c8580_testi.webp" alt="testimonial">\
+           <img class="cb-testimonial-img" src="' + I + '/testi1.webp" alt="testimonial">\
+           <img class="cb-testimonial-img" src="' + I + '/testi2.webp" alt="testimonial">\
+           <img class="cb-testimonial-img" src="' + I + '/testi3.webp" alt="testimonial">\
+           <img class="cb-testimonial-img" src="' + I + '/testi4.webp" alt="testimonial">\
+           <img class="cb-testimonial-img" src="' + I + '/testi5.webp" alt="testimonial">\
+           <img class="cb-testimonial-img" src="' + I + '/testi6.webp" alt="testimonial">\
+           <img class="cb-testimonial-img" src="' + I + '/testi7.webp" alt="testimonial">\
         </div>\
         <div class="cb-spacer"></div>\
         <a href="javascript:void(0)" onclick="cbScrollToForm()" class="cb-btn">Register now! →</a>\
@@ -261,7 +267,7 @@
       <div class="cb-container cb-text-center">\
         <div class="cb-divider" style="height:80px;margin-bottom:30px;"></div>\
         <h3 class="cb-heading cb-heading-md" style="margin-bottom:30px;">I get so many messages like…</h3>\
-        <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/5ac08ca-c384-ce6-3dba-78bfdae42736_Copy_of_Career_Bloom_Webinar_-_DM_Conversation.png" alt="DM conversation about career change" style="max-width:500px;width:100%;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1);">\
+        <img src="' + I + '/dm-conversation.png" alt="DM conversation about career change" style="max-width:500px;width:100%;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1);">\
       </div>\
     </div>\
     \
@@ -295,7 +301,7 @@
             <a href="javascript:void(0)" onclick="cbScrollToForm()" class="cb-btn">Save My Seat! →</a>\
           </div>\
           <div class="cb-col-half" style="max-width:35%;text-align:center;">\
-            <img class="cb-bio-img" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/32f12b2-1edc-d1b0-671c-0bfda0b1bcf_Theresa.png" alt="Theresa White, career change coach">\
+            <img class="cb-bio-img" src="' + I + '/theresa-bio.png" alt="Theresa White, career change coach">\
           </div>\
         </div>\
       </div>\
@@ -306,7 +312,7 @@
       <div class="cb-container">\
         <div class="cb-row">\
           <div class="cb-col-half" style="text-align:center;">\
-            <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/a6b6a88-15bb-ca8-bf38-1a263f02645_career_change_masterclass_for_free.webp" alt="Career change masterclass" style="max-width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);">\
+            <img src="' + I + '/masterclass-preview.webp" alt="Career change masterclass" style="max-width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);">\
           </div>\
           <div class="cb-col-half">\
             <h2 class="cb-heading cb-heading-md cb-text-center"><strong>So if you\'re looking for:</strong></h2>\
@@ -336,7 +342,7 @@
       <div class="cb-container">\
         <div class="cb-row">\
           <div style="flex:0 0 auto;">\
-            <img class="cb-avatar" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2155052154/settings_images/e3c0ff7-ad2-8ed2-12c7-ba2057faa812_Brenda.png" alt="Brenda L.">\
+            <img class="cb-avatar" src="' + I + '/brenda-avatar.png" alt="Brenda L.">\
           </div>\
           <div style="flex:1;min-width:200px;">\
             <p>"I didn\'t realize how much I would actually learn about myself. I am 40 years old, and so I thought I knew who I was, but it was so eye-opening! I also didn\'t realize how much my self-confidence would grow through this experience. Thank you from the bottom of my heart!!!!!</p>\
