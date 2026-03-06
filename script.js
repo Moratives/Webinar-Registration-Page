@@ -15,7 +15,7 @@
   // ⚠️ CONFIGURE THIS: Set to your GitHub Pages or raw GitHub URL where images are hosted
   // Example: 'https://yourusername.github.io/your-repo/images'
   // Example: 'https://raw.githubusercontent.com/yourusername/your-repo/main/public/images'
-  var IMG_BASE = 'images';
+  var IMG_BASE = 'https://moratives.github.io/Fonts/images';
 
   // Wait for DOM to be ready
   function init() {
