@@ -1,13 +1,4 @@
-/**
- * CareerBloom Masterclass - WebinarJam Section Injector
- * 
- * INSTRUCTIONS:
- * 1. Copy everything inside the <script>...</script> tags below
- * 2. Paste into WebinarJam's "Custom Code" / "Registration Page" code injection area
- * 3. The sections will automatically inject after the existing page content loads
- *
- * To use: Wrap this entire code in <script>...</script> tags when pasting into WebinarJam.
- */
+
 
 (function() {
   'use strict';
@@ -192,7 +183,7 @@
     return '' +
 
     /* ── SECTION 1: As Seen In ── */
-    '<div class="cb-section cb-bg-cream">' +
+    '<div class="cb-section cb-bg-cream" id="asSeen">' +
       '<div class="cb-container cb-text-center">' +
         '<div class="cb-logo-bar">' +
           '<img src="' + I + '/as-seen-in.png" alt="As seen in media logos" style="max-width:100%;height:auto;">' +
@@ -201,7 +192,7 @@
     '</div>' +
 
     /* ── SECTION 2: Cheryl Testimonial ── */
-    '<div class="cb-section cb-bg-cream" style="padding-top:0;">' +
+    '<div class="cb-section cb-bg-cream" id="cTestimonial" style="padding-top:0;">' +
       '<div class="cb-container-narrow">' +
         '<div class="cb-quote-block">' +
           '<img class="cb-avatar" src="' + I + '/cheryl-avatar.png" alt="Cheryl">' +
@@ -213,7 +204,7 @@
     '</div>' +
 
     /* ── SECTION 3: Pain Point ── */
-    '<div class="cb-section cb-bg-white">' +
+    '<div class="cb-section cb-bg-white" id="section3">' +
       '<div class="cb-container">' +
         '<div class="cb-row">' +
           '<div class="cb-col-half cb-text-center">' +
@@ -234,7 +225,7 @@
     '</div>' +
 
     /* ── SECTION 4: Transition Dark Banner ── */
-    '<div class="cb-section cb-bg-charcoal" style="padding:60px 24px;">' +
+    '<div class="cb-section cb-bg-charcoal" id="section4" style="padding:60px 24px;">' +
       '<div class="cb-container-narrow cb-text-center">' +
         '<h2 class="cb-heading cb-h2" style="margin-bottom:16px;">See how to find a career that\'s fulfilling, interesting, and makes you EXCITED for Mondays!</h2>' +
         '<p class="cb-subheading" style="color:#aaa;margin-bottom:0;">(And probably pays better, too!)</p>' +
@@ -242,7 +233,7 @@
     '</div>' +
 
     /* ── SECTION 5: 3 Benefits Cards ── */
-    '<div class="cb-section cb-bg-cream">' +
+    '<div class="cb-section cb-bg-cream" id="benefitCards">' +
       '<div class="cb-container cb-text-center">' +
         '<h2 class="cb-heading cb-h2" style="margin-bottom:48px;">In this free career change Masterclass,<br>see how to:</h2>' +
         '<div class="cb-cards-row">' +
@@ -279,7 +270,7 @@
     '</div>' +
 
     /* ── SECTION 6: Testimonial Gallery ── */
-    '<div class="cb-section cb-bg-white">' +
+    '<div class="cb-section cb-bg-white" id="gallery">' +
       '<div class="cb-container cb-text-center">' +
         '<h3 class="cb-heading cb-h3" style="font-style:italic;margin-bottom:36px;">"I finally feel like I have the tools I need to find a new career!"</h3>' +
         '<div class="cb-testi-grid">' +
@@ -299,7 +290,7 @@
     '</div>' +
 
     /* ── SECTION 7: DM Conversation ── */
-    '<div class="cb-section cb-bg-white" style="padding-top:0;">' +
+    '<div class="cb-section cb-bg-white" id="dmConvo" style="padding-top:0;">' +
       '<div class="cb-container-narrow cb-text-center">' +
         '<div class="cb-divider-h"></div>' +
         '<h3 class="cb-heading cb-h3" style="margin-bottom:30px;">I get so many messages like…</h3>' +
@@ -308,7 +299,7 @@
     '</div>' +
 
     /* ── SECTION 8: Skilled Statement ── */
-    '<div class="cb-section cb-bg-cream" style="padding:80px 24px;">' +
+    '<div class="cb-section cb-bg-cream" id="section8" style="padding:80px 24px;">' +
       '<div class="cb-container-narrow cb-text-center">' +
         '<h2 class="cb-heading cb-h1">You are <span class="cb-coral-underline">skilled</span>, <span class="cb-coral-underline">experienced</span>,<br>and <span class="cb-coral-underline">talented</span>.</h2>' +
         '<p class="cb-subheading" style="margin-top:24px;">Isn\'t it time you have a career you enjoy?</p>' +
@@ -316,7 +307,7 @@
     '</div>' +
 
     /* ── SECTION 9: About Theresa Bio ── */
-    '<div class="cb-section cb-bg-charcoal" style="padding:80px 24px;">' +
+    '<div class="cb-section cb-bg-charcoal" id="about" style="padding:80px 24px;">' +
       '<div class="cb-container">' +
         '<div class="cb-row">' +
           '<div class="cb-col-half" style="flex:1.6;">' +
@@ -345,7 +336,7 @@
     '</div>' +
 
     /* ── SECTION 10: Benefits + Masterclass Preview ── */
-    '<div class="cb-section cb-bg-cream">' +
+    '<div class="cb-section cb-bg-cream" id="section10">' +
       '<div class="cb-container">' +
         '<div class="cb-row">' +
           '<div class="cb-col-half cb-text-center">' +
@@ -375,7 +366,7 @@
     '</div>' +
 
     /* ── SECTION 11: Brenda Final Testimonial ── */
-    '<div class="cb-section cb-bg-white">' +
+    '<div class="cb-section cb-bg-white" id="testimonial">' +
       '<div class="cb-container-narrow">' +
         '<div class="cb-quote-block">' +
           '<img class="cb-avatar" src="' + I + '/brenda-avatar.png" alt="Brenda L.">' +
