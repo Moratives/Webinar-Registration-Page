@@ -194,9 +194,8 @@
     /* ── SECTION 1: As Seen In ── */
     '<div class="cb-section cb-bg-cream">' +
       '<div class="cb-container cb-text-center">' +
-        '<p class="cb-subheading" style="margin-bottom:24px;">As seen in</p>' +
         '<div class="cb-logo-bar">' +
-          '<img src="' + I + '/as-seen-in-logos.jpg" alt="As seen in media logos" style="max-width:85%;height:auto;">' +
+          '<img src="' + I + '/as-seen-in.png" alt="As seen in media logos" style="max-width:100%;height:auto;">' +
         '</div>' +
       '</div>' +
     '</div>' +
