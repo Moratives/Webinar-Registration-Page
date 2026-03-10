@@ -303,8 +303,8 @@
       '<div class="cb-container">' +
         '<div class="cb-row">' +
           '<div class="cb-col-half" style="flex:1.6;">' +
-            '<h2 class="cb-heading cb-h2" style="margin-bottom:8px;">Hi! I\'m Theresa,</h2>' +
-            '<p class="cb-subheading" style="margin-bottom:24px;">Career Clarity Expert &amp; 5x Certified Career Coach.</p>' +
+            '<h2 class="cbn-heading cb-h2" style="margin-bottom:8px;">Hi! I\'m Theresa,</h2>' +
+            '<p class="cbn-subheading" style="margin-bottom:24px;">Career Clarity Expert &amp; 5x Certified Career Coach.</p>' +
             '<p>I help women gain career clarity in record time</p>' +
             '<p>...and use their existing skills to find careers they love!</p>' +
             '<p>I understand what you\'re going through, because I\'ve been in your shoes.</p>' +
