@@ -33,7 +33,9 @@
   function register() {
     $("button.wj-embed-button.js-embed-button").click()
   }
-
+  
+  window.register = register;
+  
   function fixBrokenImages() {
     var imgs = document.querySelectorAll('#cb-injected-sections img');
     imgs.forEach(function(img) {
