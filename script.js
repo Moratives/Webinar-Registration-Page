@@ -7,6 +7,13 @@
   var IMG_BASE = 'https://moratives.github.io/Fonts/images';
 
   function init() {
+    var countdownBar = document.createElement('div');
+    countdownBar.id = "cb-countdown-bar";
+    countdownBar.innerHTML =
+      'Spots are limited! Next Masterclass starts in: <span id="cb-countdown">00:00:00</span>';
+    
+    document.body.prepend(countdownBar);
+    
     var target = document.querySelector('#js-content-section') || document.querySelector('.content_area') || document.querySelector('.d-flex.flex-column') || document.body;
     
     var container = document.createElement('div');
@@ -28,11 +35,65 @@
     } else {
       target.appendChild(container);
     }
+    startQuarterCountdown();
   }
 
   function register() {
     $("button.wj-embed-button.js-embed-button").click()
   }
+
+  function startQuarterCountdown() {
+
+  function getNextQuarter() {
+    const now = new Date();
+    const minutes = now.getMinutes();
+    const nextQuarter = Math.ceil(minutes / 15) * 15;
+
+    const target = new Date(now);
+
+    if (nextQuarter === 60) {
+      target.setHours(now.getHours() + 1);
+      target.setMinutes(0);
+    } else {
+      target.setMinutes(nextQuarter);
+    }
+
+    target.setSeconds(0);
+    target.setMilliseconds(0);
+
+    return target;
+  }
+
+  let targetTime = getNextQuarter();
+
+  function updateCountdown() {
+
+    const now = new Date();
+    let diff = targetTime - now;
+
+    if (diff <= 0) {
+      targetTime = getNextQuarter();
+      diff = targetTime - now;
+    }
+
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    const el = document.getElementById("cb-countdown");
+
+    if (el) {
+      el.textContent =
+        String(hours).padStart(2,'0') + ":" +
+        String(minutes).padStart(2,'0') + ":" +
+        String(seconds).padStart(2,'0');
+    }
+  }
+
+  setInterval(updateCountdown,1000);
+  updateCountdown();
+}
+
   
   window.register = register;
   
@@ -62,6 +123,8 @@
 
   function getStyles() {
     return '' +
+      '#cb-countdown-bar{ position:fixed; top:0; left:0; width:100%; background:#cfd8d6; color:#000; text-align:center; font-size:18px; padding:10px; font-weight:600; z-index:99999; }' +
+      ' #cb-countdown{ font-weight:700; margin-left:6px; }' +
       /* ── Reset & Base ── */
       '#cb-injected-sections { font-family: "Open Sans", sans-serif; color: #4a4a4a; line-height: 1.7; -webkit-font-smoothing: antialiased; }' +
       '#cb-injected-sections *, #cb-injected-sections *::before, #cb-injected-sections *::after { box-sizing: border-box; }' +
