@@ -148,7 +148,7 @@ function startQuarterCountdown() {
       '.cb-text-center { text-align: center; }' +
 
       /* ── Headings ── */
-      '.cb-heading { font-family: "Playfair Display", Georgia, serif; font-weight: 700; color: #2d2d2d; margin: 0 0 20px 0; }' +
+      '.cb-heading { font-family: "Playfair Display", Georgia, serif; font-weight: 700; color: black; margin: 0 0 20px 0; }' +
       '.cb-bg-charcoal .cb-heading { color: #ffffff; }' +
       '.cb-h1 { font-size: 40px; line-height: 1.2; }' +
       '.cb-h2 { font-size: 34px; line-height: 1.25; }' +
